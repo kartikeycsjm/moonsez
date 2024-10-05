@@ -5,13 +5,15 @@ import Link from 'next/link'
 import { useState } from 'react'
 const Header = () => {
   const [open, setOpen] = useState(false);
+  
   return (
     <div className='w-full h-[70px] flex justify-between
     items-center'>
       <Image className='ml-4 h-[50px] w-[110px]'
         src={'/Moonlogo.png'} width={300} height={50} quality={100}></Image>
       <div className='w-[25px] cursor-pointer mr-4 bg-[rgb(7,150,254)] h-[27px] rounded-lg
-      flex justify-center items-center'>
+      flex justify-center items-center
+      hover:bg-black'>
         <Image onClick={() => setOpen(!open)}
           src={`${open ? '/close.png' : '/menu.png'}`} width={16} height={20}></Image>
       </div>
